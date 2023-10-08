@@ -8,5 +8,82 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Estilamos el header */
+/* Distribucion básica de la página */
+#flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+/* Estilamos el header */
+/* Primero la barra de navegación */
+header {
+    background-color: #1F2937;
+}
+
+nav {
+    padding: 0.5em;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px #e73131;
+    flex-wrap: wrap;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.links > li {
+    margin: 0 1em;
+}
+
+.links > li > a {
+    text-decoration: none;
+    color: #1F2937;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.links > li > a:hover {
+    color:#e73131;
+}
+
+nav > img {
+    width: 50px;
+    height: auto;
+}
+/* Ahora el banner superior */
+
+#sub-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 4em;
+    justify-content: center;
+    gap: 2em;
+    height: 94vh;
+    align-items: center;
+    border: 5px dotted violet;
+}
+
+.left, .right {
+    height: 80vh;
+}
+
+.left {
+    flex: 1;
+    border: 1px solid greenyellow;
+
+}
+.right {
+    flex: 3;
+    border: 1px solid greenyellow;
+}
+
+.right > img {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+}
