@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    position: relative;
 }
 
 /* Distribucion básica de la página */
@@ -19,16 +20,20 @@ body {
 /* Primero la barra de navegación */
 header {
     background-color: #1F2937;
-    height: 73vh;
+    margin-top: 2em;
 }
 
 nav {
+    width: 100%;
     padding: 0.5em;
     background-color: white;
     display: flex;
     justify-content: space-between;
     box-shadow: 0 2px 5px #e73131;
     flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 
 .links {
@@ -58,14 +63,18 @@ nav > img {
 }
 /* Ahora el banner superior */
 
-#sub-header {
+#sub-header, .cards {
     display: flex;
     flex-wrap: wrap;
     padding: 2vh 4vw;
     justify-content: center;
     gap: 2vw;
     align-items:start;
+}
+
+#sub-header {
     height: 100%;
+
 }
 
 .left, .right {
@@ -82,7 +91,7 @@ nav > img {
     height: 90%;
 }
 
-.left > h1 {
+.header {
     color: #F9FaF8;
     font-size: 48px;
     flex: 0 1 auto;
@@ -102,12 +111,10 @@ nav > img {
     position: relative;
     overflow: hidden;
 }
-
-.right > img {
+ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 
 .contact-button {
@@ -125,4 +132,66 @@ nav > img {
    transform-origin: 0% 0%;
    transform: rotate3d(15,-5,0,25deg);
     
+}
+
+.card {
+    background-color: #e73131;
+    padding: 0.8em;
+    border-radius: 15px;
+    flex: 1;
+    flex-shrink: 0;
+}
+
+.card > img {
+    border-radius: 15px;
+}
+
+.card > p {
+    color: #E5E7EB;
+    text-align: center;
+}
+#home > h2 {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1em 0;
+    color: #e73131;
+}
+
+#about {
+    background-color: lightgrey;
+    padding: 4em 8em;
+    font-size: 1.5em;
+    font-weight: 100;
+}
+.sign {
+    text-align: right;
+    font-weight: 900;
+    padding: 1em 2em;
+}
+#contact {
+    padding: 3em 8em;
+}
+.container {
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #E5E7EB;
+    justify-content: space-around;
+    background-color: #1F2937;
+    padding: 2em 4em;
+}
+.container > p {
+    padding: 1em;
+    flex: 5;
+}
+
+.container > button {
+    flex: 1;
+}
+
+footer {
+    background-color: #1F2937;
+    padding: 1em 0;
+    color: #E5E7EB;
+    text-align: center;
 }
